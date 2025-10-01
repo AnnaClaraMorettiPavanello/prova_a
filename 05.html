@@ -10,13 +10,11 @@
     usuariosCadastrados = ['admin', 'julia', 'pedro', 'lucas'];
     const usuario = prompt(`Insira o seu nome.`).toLowerCase();
 
-    for (let nome of usuariosCadastrados) {
-        if (usuario == nome) {
-            alert(`Você está cadastrado.`);}
-        else {
-            alert(`Você não está cadastrado`);
-        }
-        }
-    
+    if (usuariosCadastrados.indexOf(usuario) >= 0) {
+        alert(`Usuário Cadastrado!`);
+    }    
+    else {
+        alert(`Usuário Não Cadastrado!`);
+    }
 
 </script>

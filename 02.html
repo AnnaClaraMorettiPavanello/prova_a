@@ -10,18 +10,16 @@
     //*ENTRADA
 
     let naoPagas = [50.00, 15.50, 120.00, 80];
-    let comJuro = [];
     const juro = Number(prompt(`Informe quanto de juro será aplicado nas contas não pagas (inofrme apenas com números).`));
     let final = 0;
     //*PROCESSAMENTO
 
     for (let item of naoPagas) {
-        final = item + (item * juro / 100);
-        comJuro.push(final)
+        final = final + (item + (item * juro / 100));
     }
 
     //*SAÍDA
 
-    alert(`O valor final da compra é de R$:${comJuro}.`);
+    alert(`O valor final da compra é de R$:${final.toFixed(2).replace(".",",")}.`);
 
 </script>
